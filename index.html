@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="ELIT BUD — construction and renovation services, from initial planning to the finishing touches. Contact Andriy to discuss your project." />
+  <title>ELIT BUD | Construction & Renovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#111215;--muted:#65686e;--yellow:#f7ba08;--yellow-2:#ffd44b;--paper:#fff;--soft:#f7f7f5;--line:#e9e9e7;--dark:#131416;--max:1190px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}img{max-width:100%;display:block}::selection{background:#ffe27c;color:#111} .wrap{max-width:var(--max);padding:0 28px;margin:auto}
+    .topline{height:5px;background:var(--yellow)}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:89px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;flex-shrink:0}.brand img{width:205px;height:auto}
+    .links{display:flex;gap:31px;align-items:center}.links a{font-weight:700;font-size:13px;color:#424448;transition:color .2s}.links a:hover{color:#b47d00}
+    .nav-call{border-radius:7px;background:var(--ink);padding:15px 18px;color:white;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:9px;transition:transform .2s,background .2s}.nav-call:hover{background:#333;transform:translateY(-2px)}.menu-btn{display:none;background:white;border:1px solid var(--line);padding:10px 12px;border-radius:8px;font-size:22px}
+    .hero{position:relative;overflow:hidden;background:#fff}.hero .wrap{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:40px;min-height:640px;padding-top:60px;padding-bottom:80px}.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:#a77a00}.eyebrow:before{content:'';width:29px;height:3px;background:var(--yellow)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;letter-spacing:-.055em}h1{font-size:clamp(42px,5.05vw,76px);font-weight:800;line-height:1.09;margin:23px 0 23px}h1 span{position:relative;z-index:1;white-space:nowrap}h1 span:after{content:'';position:absolute;z-index:-1;bottom:4px;left:0;right:0;height:14px;background:#ffdf67;opacity:.85}.lead{max-width:520px;font-size:17px;line-height:1.85;color:var(--muted);margin-bottom:29px}.buttons{display:flex;flex-wrap:wrap;gap:11px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:17px 23px;border:1px solid transparent;border-radius:7px;font-size:13px;font-weight:800;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--yellow);color:#131313;box-shadow:0 11px 25px #f7ba082b}.btn.outline{background:white;border-color:#d7d7d5}.hero-notes{display:flex;gap:24px;flex-wrap:wrap;margin-top:37px}.hero-notes div{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700;color:#454545}.tick{display:grid;place-items:center;width:20px;height:20px;background:#fff3c7;border-radius:50%;font-size:12px;color:#9c6d00}
+    .hero-art{height:505px;position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(155deg,#f3f3ef,#dededb);box-shadow:18px 18px 0 #f5c32f}.hero-art svg{width:100%;height:100%;display:block}.float-card{position:absolute;bottom:24px;left:24px;background:white;padding:15px 18px;border-radius:7px;box-shadow:0 12px 30px #0001;display:flex;align-items:center;gap:12px}.float-card .square{background:#ffdb5e;display:grid;place-items:center;width:37px;height:37px;border-radius:5px;font-size:19px}.float-card b{font-size:13px}.float-card small{display:block;color:#737373;font-size:11px;margin-top:4px}
+    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fafaf9}.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr)}.trust-item{display:flex;align-items:center;justify-content:center;gap:14px;padding:27px 12px;border-right:1px solid var(--line)}.trust-item:last-child{border-right:0}.trust-icon{font-size:27px;color:#d69b00}.trust b{display:block;font-size:13px}.trust span{font-size:12px;color:#777;display:block;margin-top:4px}
+    section{scroll-margin-top:110px}.section{padding:110px 0}.section-tag{color:#ac7c00;letter-spacing:.19em;text-transform:uppercase;font-weight:800;font-size:11px;margin-bottom:12px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:39px}.section-heading h2,.about h2,.contact h2{font-size:clamp(33px,3.5vw,49px);line-height:1.19;margin:0}.section-heading p{max-width:370px;color:var(--muted);font-size:15px;line-height:1.8;margin:0}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{padding:31px 29px 32px;border:1px solid var(--line);border-radius:9px;background:#fff;transition:border-color .2s,transform .2s,box-shadow .2s}.service:hover{border-color:#f6c73d;transform:translateY(-4px);box-shadow:0 22px 40px #00000008}.service-ico{font-size:29px;width:57px;height:57px;border-radius:10px;background:#fff4d5;display:grid;place-items:center;margin-bottom:24px}.service h3{font-size:20px;letter-spacing:-.04em;margin-bottom:12px}.service p{font-size:14px;line-height:1.75;color:#717379;margin-bottom:0}
+    .about{background:var(--soft)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}.about-visual{min-height:435px;background:linear-gradient(120deg,#202124,#323334);border-radius:10px;position:relative;overflow:hidden;padding:35px}.about-visual:before{content:'';position:absolute;width:360px;height:360px;border:55px solid #f7ba08;transform:rotate(45deg);left:50%;top:20%;opacity:.9}.about-visual:after{content:'';position:absolute;width:160px;height:350px;background:#fff;transform:skewY(-29deg);bottom:-70px;left:35%;opacity:.9}.about-plaque{position:absolute;z-index:2;bottom:25px;left:25px;right:25px;background:#111c;padding:24px;border-radius:8px;color:white;backdrop-filter:blur(3px)}.about-plaque strong{font-size:26px;font-weight:800}.about-plaque span{display:block;color:#d6d6d6;margin-top:7px;font-size:13px}.about-copy>p{color:var(--muted);font-size:15px;line-height:1.9;margin:23px 0}.about-points{padding:0;margin:0 0 28px;list-style:none}.about-points li{padding:10px 0;font-weight:700;font-size:14px;display:flex;gap:12px;align-items:center}.about-points li:before{content:'✓';color:#141414;background:#ffd44b;padding:4px 8px;border-radius:5px}
+    .process{padding:103px 0;background:white}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}.step{position:relative;padding-top:19px;border-top:2px solid #e8e8e8}.step:before{content:'';position:absolute;top:-2px;left:0;width:41px;height:2px;background:var(--yellow)}.step .num{color:#c9a02f;font-size:13px;font-weight:800;margin-bottom:20px}.step h3{font-size:18px}.step p{font-size:13px;color:#777;line-height:1.8}
+    .focus{background:#fafafa}.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.focus-card{min-height:295px;background:#202124;position:relative;display:flex;align-items:end;overflow:hidden;border-radius:9px}.focus-card:nth-child(2){background:#343536}.focus-card:nth-child(3){background:#222326}.focus-card .architecture{position:absolute;inset:0;opacity:.9}.focus-card .architecture svg{width:100%;height:100%}.focus-label{position:relative;z-index:2;padding:23px;color:white;width:100%;background:linear-gradient(0deg,#000b,transparent)}.focus-label strong{font-size:20px}.focus-label span{display:block;font-size:12px;color:#d7d7d7;margin-top:6px}.focus-note{font-size:12px;color:#888;margin:20px 0 0}
+    .faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:22px 0}summary{cursor:pointer;font-size:16px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:24px;color:#d9a600;line-height:1}details[open] summary:after{content:'−'}details p{max-width:750px;font-size:14px;color:#747474;line-height:1.8;margin:16px 0 0}
+    .contact{padding:95px 0;background:#151617;color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center}.contact h2{margin:13px 0 20px}.contact p{font-size:15px;line-height:1.85;color:#bdc0c2;max-width:460px}.contact .phone{font-family:Manrope;font-size:clamp(22px,2.8vw,34px);letter-spacing:-.03em;font-weight:800;display:block;margin:26px 0 12px;color:#ffc928}.contact-card{background:white;border-radius:10px;padding:29px;color:#151515}.contact-card h3{font-size:22px;margin-bottom:8px}.contact-card>p{color:#777;margin:0 0 19px;font-size:13px}.field{margin-bottom:14px}.field label{font-size:12px;font-weight:800;margin-bottom:7px;display:block}.field input,.field select,.field textarea{width:100%;border:1px solid #dedede;border-radius:5px;padding:13px 12px;color:#222;background:white;outline:none;transition:border .2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#dca500}.field textarea{min-height:78px;resize:vertical}.form-note{font-size:11px;color:#888;margin:12px 0 0;line-height:1.5}.contact-card .btn{width:100%}
+    footer{background:#101112;color:#c5c5c5;padding:32px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footbrand{font-family:Manrope;font-weight:900;font-size:24px;letter-spacing:-.07em;color:white}.footbrand span{color:#ffc629}.foot-copy{font-size:12px;color:#aaa}.footer-inner a{font-weight:700;font-size:13px;color:#fff}
+    @media(max-width:1000px){.nav{height:78px}.links{gap:16px}.hero .wrap{gap:25px}.hero-art{height:420px}.hero .wrap{min-height:550px}.about-grid{gap:35px}}
+    @media(max-width:770px){.wrap{padding:0 20px}.nav{height:74px}.brand img{width:171px}.menu-btn{display:block}.nav-call{display:none}.links{position:absolute;top:74px;left:0;right:0;background:white;border-bottom:1px solid var(--line);display:none;flex-direction:column;gap:0;align-items:stretch;padding:9px 22px 19px;box-shadow:0 15px 25px #0001}.links.open{display:flex}.links a{padding:14px 0}.hero .wrap{grid-template-columns:1fr;padding-top:53px;padding-bottom:67px;gap:42px}.hero-art{height:390px;max-width:600px;width:100%;margin:0 auto}.hero h1{font-size:clamp(39px,8vw,66px)}.trust .wrap{grid-template-columns:1fr}.trust-item{justify-content:start;border-right:0;border-bottom:1px solid var(--line)}.trust-item:last-child{border-bottom:0}.section{padding:76px 0}.section-heading{display:block}.section-heading p{margin-top:15px}.service-grid,.focus-grid{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.about-visual{min-height:320px}.steps{grid-template-columns:1fr 1fr}.contact{padding:72px 0}.contact-grid{gap:35px}}
+    @media(max-width:520px){h1{font-size:42px}.hero-art{height:305px;box-shadow:10px 10px 0 #f5c32f}.hero-notes{gap:12px 19px}.service-grid,.focus-grid,.steps{grid-template-columns:1fr}.service{padding:26px}.focus-card{min-height:250px}.section-heading h2,.about h2,.contact h2{font-size:35px}.about-visual{min-height:300px}.footer-inner{flex-direction:column;text-align:center}.float-card{left:13px;bottom:13px;padding:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+    /* Mobile usability: preserve the original look while improving touch behavior. */
+    html{scroll-padding-top:110px}body{min-width:0;overflow-x:clip}
+    .wrap,.hero .wrap,.nav,.section-heading,.about-grid,.contact-grid{min-width:0}
+    .hero .wrap>*,.about-grid>*,.contact-grid>*,.section-heading>*{min-width:0}
+    a,button,summary,input,select,textarea{-webkit-tap-highlight-color:transparent}
+    button,.btn,.nav-call,.links a{touch-action:manipulation}
+    a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #d29b00;outline-offset:3px}
+    .menu-btn{align-items:center;justify-content:center;min-width:46px;min-height:46px;line-height:1}
+    @media(max-width:770px){
+      .nav{position:relative}.links{top:100%;max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;z-index:60}
+      .links a{display:flex;align-items:center;min-height:48px;font-size:15px}
+      .menu-btn{display:inline-flex;flex-shrink:0}
+      section{scroll-margin-top:88px}
+      .btn{min-height:48px}
+      .contact-card{min-width:0}
+      .field input,.field select,.field textarea{font-size:16px;min-height:48px}
+      .field textarea{min-height:110px}
+    }
+    @media(max-width:520px){
+      .wrap{padding-left:18px;padding-right:18px}
+      .brand img{width:min(168px,48vw)}
+      .hero h1{font-size:clamp(36px,10vw,42px);overflow-wrap:normal}
+      h1 span{white-space:normal}
+      .hero .wrap{padding-top:43px;padding-bottom:58px}
+      .lead{font-size:16px;line-height:1.75}
+      .buttons{gap:10px}
+      .hero .buttons .btn{flex:1 1 190px}
+      .hero-art{height:clamp(235px,76vw,305px);box-shadow:8px 8px 0 #f5c32f}
+      .float-card{max-width:calc(100% - 26px)}
+      .float-card b{font-size:12px}.float-card small{font-size:10px}
+      .section{padding:66px 0}.process{padding:65px 0}
+      .section-heading h2,.about h2,.contact h2{font-size:clamp(29px,8.5vw,35px)}
+      .service-grid,.focus-grid,.steps{grid-template-columns:minmax(0,1fr)}
+      .trust-item{padding:20px 4px}
+      .about-visual{min-height:275px}.about-visual:before{left:35%}
+      .contact{padding:65px 0}.contact-card{padding:23px 18px}
+      .contact .phone{font-size:clamp(22px,6.4vw,32px);overflow-wrap:anywhere}
+      .contact .buttons .btn{flex:1 1 145px}
+      .footer-inner{gap:15px}
+    }
+    @media(max-width:360px){.wrap{padding-left:14px;padding-right:14px}.hero h1{font-size:34px}.float-card .square{display:none}.contact-card{padding:20px 14px}}
+  
+/* Real projects: keep existing illustrated cards untouched */
+.real-project-bridge{margin-top:26px;padding:22px;background:#fff;border:1px solid #e7e7e3;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.real-project-intro{display:flex;align-items:center;gap:15px;flex:1 1 280px}
+.real-project-tag{font-size:10px;letter-spacing:.15em;font-weight:900;color:#a77a00;text-transform:uppercase;margin-bottom:6px}
+.real-project-intro h3{font-size:18px;letter-spacing:-.035em;margin:0 0 5px}
+.real-project-intro p{font-size:12px;color:#666;line-height:1.5;margin:0}
+.real-thumbs{display:flex;gap:7px;flex-shrink:0}
+.real-thumbs img{width:70px;height:62px;object-fit:cover;border-radius:6px}
+.gallery-intro{margin:24px 0 0;font-size:13px;color:#666;line-height:1.7}
+.gallery-panel{margin-top:24px;padding:26px;border:1px solid #e6e6e1;border-radius:12px;background:#fff}
+.gallery-panel[hidden]{display:none!important}
+.gallery-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:17px}
+.gallery-head h3{font-size:25px;margin:0}
+.gallery-close{border:1px solid #ddd;background:#fff;border-radius:6px;min-height:42px;padding:8px 15px;font-weight:800}
+.gallery-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.gallery-filter{border:1px solid #ddd;background:#fff;color:#222;border-radius:100px;padding:11px 17px;min-height:44px;font-size:12px;font-weight:800}
+.gallery-filter.active{background:#111215;border-color:#111215;color:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.gallery-tile{border:1px solid #ebebe8;background:#fff;border-radius:9px;overflow:hidden;padding:0;text-align:left;display:flex;flex-direction:column;cursor:pointer}
+.gallery-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .2s}
+.gallery-tile:hover img{transform:scale(1.025)}
+.gallery-tile-info{padding:13px 15px 16px}
+.gallery-tile-info strong{display:block;font-size:14px;margin-bottom:5px}
+.gallery-tile-info small{font-size:12px;color:#777;line-height:1.5}
+.gallery-tile-label{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;color:#8c6800;margin-bottom:7px}
+.gallery-item-hidden{display:none!important}
+.lightbox{position:fixed;inset:0;z-index:400;background:rgba(7,8,9,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 16px 20px;color:white}
+.lightbox[hidden]{display:none!important}
+.lightbox img{object-fit:contain;max-width:100%;max-height:calc(100dvh - 210px);border-radius:5px}
+.lightbox-caption{max-width:750px;text-align:center;margin-top:18px;font-size:14px;line-height:1.5}
+.lightbox-caption small{display:block;color:#bbb;margin-top:5px}
+.lightbox-control{position:absolute;display:grid;place-items:center;background:#222;color:white;border:1px solid #777;border-radius:8px;width:44px;height:44px;font-size:23px}
+.lightbox-x{top:16px;right:18px}.lightbox-prev{top:48%;left:12px}.lightbox-next{top:48%;right:12px}
+body.lightbox-open{overflow:hidden}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr}.gallery-panel{padding:16px 13px}.real-project-bridge{padding:17px}.real-thumbs img{width:60px;height:56px}.real-thumbs{order:2}.real-project-bridge>.btn{order:3;width:100%}.gallery-head h3{font-size:20px}.lightbox-prev{left:6px}.lightbox-next{right:6px}.lightbox-control{width:42px;height:42px}.lightbox img{max-height:calc(100dvh - 235px)}}
+
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a href="#home" class="brand" aria-label="ELIT BUD home"><img src="logo-white.png" alt="ELIT BUD Construction and Renovation logo"></a>
+      <nav class="links" id="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About us</a><a href="#process">Our process</a><a href="#focus">What we do</a><a href="#contact">Contact</a></nav>
+      <a class="nav-call" href="tel:+15149951274">☎ &nbsp; +1 (514) 995-1274</a>
+      <button class="menu-btn" id="menu" type="button" aria-label="Open navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="wrap">
+      <div><div class="eyebrow">Construction & Renovation</div><h1>Built right.<br><span>From start</span><br>to finish.</h1><p class="lead">Your project, taken care of from the first idea to the final detail. ELIT BUD delivers practical construction and renovation solutions with clear communication and attention to quality.</p><div class="buttons"><a class="btn primary" href="#contact">Discuss your project <span>↗</span></a><a class="btn outline" href="#services">Explore services <span>→</span></a></div><div class="hero-notes"><div><span class="tick">✓</span> Turnkey solutions</div><div><span class="tick">✓</span> Quality-focused work</div><div><span class="tick">✓</span> Direct communication</div></div></div>
+      <div class="hero-art" aria-label="Architectural illustration of a modern home" role="img"><svg viewBox="0 0 550 530" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f3ef"/><stop offset="1" stop-color="#c8c8c5"/></linearGradient><linearGradient id="facade" x1="0" x2="1"><stop stop-color="#f2f2ee"/><stop offset="1" stop-color="#d7d7d2"/></linearGradient></defs><rect width="550" height="530" fill="url(#sky)"/><path d="M0 395L550 340V530H0Z" fill="#d2d3cb"/><path d="M84 225L316 90L505 202L505 427L84 427Z" fill="#f6f6f2"/><path d="M60 227L312 64L530 200L514 219L312 96L75 246Z" fill="#2b2c2c"/><path d="M296 160L496 210L496 429L296 429Z" fill="url(#facade)"/><path d="M296 161L496 210L496 236L296 186Z" fill="#edbc13"/><path d="M128 268H266V426H128Z" fill="#333638"/><path d="M146 284H248V426H146Z" fill="#5c6061"/><path d="M191 284V426" stroke="#d8d8d1" stroke-width="5"/><path d="M319 247H469V367H319Z" fill="#383c3d"/><path d="M335 261H452V352H335Z" fill="#667075"/><path d="M393 261V352" stroke="#dce0df" stroke-width="5"/><path d="M335 310H452" stroke="#dce0df" stroke-width="5"/><path d="M295 158V426" stroke="#bbbdb6" stroke-width="5"/><path d="M68 432H527" stroke="#b2b5ad" stroke-width="13"/><path d="M380 427L520 410L550 433V457H367Z" fill="#c2c6c1"/><path d="M21 462L551 453" stroke="#e7e8e2" stroke-width="13"/><rect x="101" y="382" width="14" height="47" fill="#293b31"/><circle cx="109" cy="359" r="34" fill="#657763"/><circle cx="84" cy="376" r="27" fill="#506b54"/><circle cx="128" cy="380" r="26" fill="#52694e"/><path d="M0 480L550 468" stroke="#afb4aa" stroke-width="5"/></svg><div class="float-card"><div class="square">⌂</div><div><b>One team. One project.</b><small>From planning to the final touch.</small></div></div></div>
+    </div></section>
+    <div class="trust"><div class="wrap"><div class="trust-item"><div class="trust-icon">◇</div><div><b>One point of contact</b><span>Simple, direct communication</span></div></div><div class="trust-item"><div class="trust-icon">▣</div><div><b>Complete project care</b><span>From initial work to finish</span></div></div><div class="trust-item"><div class="trust-icon">✦</div><div><b>Detail matters</b><span>Care at every stage</span></div></div></div></div>
+    <section class="section" id="services"><div class="wrap"><div class="section-tag">What we offer</div><div class="section-heading"><h2>Everything you need.<br>One reliable team.</h2><p>From small updates to full-scale projects, let's talk about the scope and build the right plan for your space.</p></div><div class="service-grid"><article class="service"><div class="service-ico">⌂</div><h3>Turnkey Projects</h3><p>Coordinated work from start to finish, with the details managed along the way.</p></article><article class="service"><div class="service-ico">▥</div><h3>Home Renovations</h3><p>Refresh and improve your living space with thoughtful renovation solutions.</p></article><article class="service"><div class="service-ico">▤</div><h3>Interior Finishing</h3><p>The finishing details that bring a space together and make it feel complete.</p></article><article class="service"><div class="service-ico">▦</div><h3>Kitchen & Bathroom</h3><p>Functional updates and renovations designed around everyday use.</p></article><article class="service"><div class="service-ico">▱</div><h3>Drywall & Painting</h3><p>Careful surface preparation, walls, and clean finishing work.</p></article><article class="service"><div class="service-ico">⚒</div><h3>Custom Projects</h3><p>Have something different in mind? Tell us what you need and we’ll discuss the options.</p></article></div></div></section>
+    <section class="section about" id="about"><div class="wrap about-grid"><div class="about-visual"><div class="about-plaque"><strong>ELIT <span style="display:inline;color:#f7ba08">BUD</span></strong><span>Construction & Renovation</span></div></div><div class="about-copy"><div class="section-tag">Why ELIT BUD</div><h2>A straightforward way to build better.</h2><p>Good construction is about more than getting the job done. It's about careful planning, clear expectations and results you can feel confident about.</p><p>At ELIT BUD, the goal is simple: take your project seriously, work efficiently and focus on the details that matter.</p><ul class="about-points"><li>Clear discussion of your needs</li><li>Practical solutions for your budget</li><li>Attention to quality and finishing</li><li>Support from start to finish</li></ul><a class="btn primary" href="#contact">Let's talk <span>↗</span></a></div></div></section>
+    <section class="process" id="process"><div class="wrap"><div class="section-tag">How it works</div><div class="section-heading"><h2>Simple process.<br>Better experience.</h2><p>Every project is different, but the process should always feel understandable.</p></div><div class="steps"><div class="step"><div class="num">01 / START</div><h3>Tell us your idea</h3><p>Call or message with the details of the work you have in mind.</p></div><div class="step"><div class="num">02 / PLAN</div><h3>Discuss the scope</h3><p>We review your needs and discuss a practical approach.</p></div><div class="step"><div class="num">03 / BUILD</div><h3>Get to work</h3><p>Work moves ahead with attention to workmanship and progress.</p></div><div class="step"><div class="num">04 / FINISH</div><h3>Final details</h3><p>We focus on the finishing touches and project handover.</p></div></div></div></section>
+    <section class="section focus" id="focus"><div class="wrap"><div class="section-tag">Project possibilities</div><div class="section-heading"><h2>Spaces worth<br>getting right.</h2><p>A few examples of the kinds of spaces and improvements we can discuss for your project.</p></div><div class="focus-grid"><div class="focus-card"><div class="architecture"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#303333"/><path d="M20 200L220 35L392 180" stroke="#f7c22b" stroke-width="19" fill="none"/><path d="M70 189L220 70L355 190V300H70Z" fill="#777a72"/><path d="M105 170H191V300H105Z" fill="#26292b"/><path d="M234 176H329V252H234Z" fill="#26292b"/><path d="M281 176V252" stroke="#999" stroke-width="5"/></svg></div><div class="focus-label"><strong>Full renovation</strong><span>Fresh start for your space</span></div></div><div class="focus-card"><div class="architecture"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#555651"/><path d="M0 80H400V300H0Z" fill="#b4b6b0"/><path d="M45 110H360V260H45Z" fill="#353737"/><path d="M70 127H334V167H70Z" fill="#e0e1d9"/><path d="M70 183H334V250H70Z" fill="#b8b8ae"/><path d="M220 183V250" stroke="#3c3c3c" stroke-width="7"/><rect x="90" y="150" width="45" height="8" fill="#f1c12c"/></svg></div><div class="focus-label"><strong>Interior upgrades</strong><span>Comfort meets function</span></div></div><div class="focus-card"><div class="architecture"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#444645"/><path d="M50 0H100V300H50ZM290 0H340V300H290Z" fill="#9d9f99"/><path d="M100 60H290V300H100Z" fill="#e0e0d9"/><path d="M115 80H275V280H115Z" fill="#262c2d"/><path d="M195 80V280" stroke="#e0e0d9" stroke-width="8"/><path d="M115 183H275" stroke="#e0e0d9" stroke-width="8"/><path d="M0 280H400" stroke="#fac72a" stroke-width="10"/></svg></div><div class="focus-label"><strong>Finishing details</strong><span>The difference is in the details</span></div></div></div><p class="focus-note">The three cards above illustrate our services. Actual work photos are available below.</p><div class="real-project-bridge"><div class="real-project-intro"><div><div class="real-project-tag">REAL PHOTOS · ACTUAL WORK</div><h3>See our work in real life.</h3><p>Browse real renovation and construction project photos, including completed details and work in progress.</p></div></div><div class="real-thumbs" aria-hidden="true"><img src="images/IMG_3511.webp" alt="" loading="lazy"><img src="images/IMG_3389.webp" alt="" loading="lazy"><img src="images/IMG_2973.webp" alt="" loading="lazy"></div><button class="btn primary" id="gallery-toggle" type="button" aria-expanded="false" aria-controls="real-gallery">View Real Project Photos ↗</button></div><section class="gallery-panel" id="real-gallery" hidden aria-label="Real project photo gallery"><div class="gallery-head"><div><div class="real-project-tag">ELIT BUD PORTFOLIO</div><h3>Real Project Gallery</h3></div><button class="gallery-close" id="gallery-close" type="button">Close ✕</button></div><div class="gallery-filters" role="group" aria-label="Filter projects"><button class="gallery-filter active" type="button" data-category="All" aria-pressed="true">All</button><button class="gallery-filter" type="button" data-category="Bathrooms" aria-pressed="false">Bathrooms</button><button class="gallery-filter" type="button" data-category="Kitchens" aria-pressed="false">Kitchens</button><button class="gallery-filter" type="button" data-category="Flooring" aria-pressed="false">Flooring</button><button class="gallery-filter" type="button" data-category="Outdoor" aria-pressed="false">Outdoor</button><button class="gallery-filter" type="button" data-category="Interior" aria-pressed="false">Interior</button></div><div class="gallery-grid" id="gallery-grid"><button class="gallery-tile" type="button" data-category="Kitchens" data-index="0" aria-label="Open photo: Kitchen Renovation"><img src="images/IMG_3511.webp" alt="Kitchen cabinetry, tile backsplash and countertop installation" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">KITCHENS · IN PROGRESS</span><strong>Kitchen Renovation</strong><small>Kitchen cabinetry, tile backsplash and countertop installation</small></span></button><button class="gallery-tile" type="button" data-category="Kitchens" data-index="1" aria-label="Open photo: Kitchen Cabinetry & Finishes"><img src="images/IMG_3510.webp" alt="Kitchen renovation details with custom cabinets and stone-look surfaces" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">KITCHENS · IN PROGRESS</span><strong>Kitchen Cabinetry & Finishes</strong><small>Kitchen renovation details with custom cabinets and stone-look surfaces</small></span></button><button class="gallery-tile" type="button" data-category="Bathrooms" data-index="2" aria-label="Open photo: Modern Walk-In Shower"><img src="images/IMG_3389.webp" alt="Large-format tile with an integrated shower niche" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">BATHROOMS · IN PROGRESS</span><strong>Modern Walk-In Shower</strong><small>Large-format tile with an integrated shower niche</small></span></button><button class="gallery-tile" type="button" data-category="Bathrooms" data-index="3" aria-label="Open photo: Marble-Look Shower"><img src="images/IMG_3194.webp" alt="Bright wall tile paired with a contrasting dark shower floor" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">BATHROOMS · IN PROGRESS</span><strong>Marble-Look Shower</strong><small>Bright wall tile paired with a contrasting dark shower floor</small></span></button><button class="gallery-tile" type="button" data-category="Bathrooms" data-index="4" aria-label="Open photo: Double Vanity & Tile"><img src="images/IMG_3536.webp" alt="Coordinated tile backsplash, cabinetry and vanity surfaces" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">BATHROOMS · IN PROGRESS</span><strong>Double Vanity & Tile</strong><small>Coordinated tile backsplash, cabinetry and vanity surfaces</small></span></button><button class="gallery-tile" type="button" data-category="Bathrooms" data-index="5" aria-label="Open photo: Rustic Shower Renovation"><img src="images/IMG_3761.webp" alt="River-stone shower floor, tiled walls and natural wood accents" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">BATHROOMS · IN PROGRESS</span><strong>Rustic Shower Renovation</strong><small>River-stone shower floor, tiled walls and natural wood accents</small></span></button><button class="gallery-tile" type="button" data-category="Flooring" data-index="6" aria-label="Open photo: Patterned Tile Flooring"><img src="images/IMG_3538.webp" alt="Decorative floor tile installation with gray accent pattern" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">FLOORING · IN PROGRESS</span><strong>Patterned Tile Flooring</strong><small>Decorative floor tile installation with gray accent pattern</small></span></button><button class="gallery-tile" type="button" data-category="Flooring" data-index="7" aria-label="Open photo: Black & White Tile"><img src="images/IMG_3569.webp" alt="High-contrast checkerboard tile floor" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">FLOORING · FINISHED DETAIL</span><strong>Black & White Tile</strong><small>High-contrast checkerboard tile floor</small></span></button><button class="gallery-tile" type="button" data-category="Outdoor" data-index="8" aria-label="Open photo: Wood Deck Installation"><img src="images/IMG_2549.webp" alt="Outdoor wood deck with a clean rectangular design" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">OUTDOOR · PROJECT PHOTO</span><strong>Wood Deck Installation</strong><small>Outdoor wood deck with a clean rectangular design</small></span></button><button class="gallery-tile" type="button" data-category="Outdoor" data-index="9" aria-label="Open photo: Deck & Gazebo"><img src="images/IMG_2973.webp" alt="Outdoor deck and gazebo with dark metal roof" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">OUTDOOR · PROJECT PHOTO</span><strong>Deck & Gazebo</strong><small>Outdoor deck and gazebo with dark metal roof</small></span></button><button class="gallery-tile" type="button" data-category="Interior" data-index="10" aria-label="Open photo: Stone Feature Wall"><img src="images/IMG_3749.webp" alt="Natural-stone-look pillar and timber railing details" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">INTERIOR · PROJECT PHOTO</span><strong>Stone Feature Wall</strong><small>Natural-stone-look pillar and timber railing details</small></span></button><button class="gallery-tile" type="button" data-category="Interior" data-index="11" aria-label="Open photo: Custom Interior Niche"><img src="images/IMG_3541.webp" alt="Arched decorative alcove, cabinetry and tile accent" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">INTERIOR · IN PROGRESS</span><strong>Custom Interior Niche</strong><small>Arched decorative alcove, cabinetry and tile accent</small></span></button><button class="gallery-tile" type="button" data-category="Interior" data-index="12" aria-label="Open photo: Tile Accent & Shelving"><img src="images/IMG_3500.webp" alt="Wall tile paired with floating wood shelves" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">INTERIOR · IN PROGRESS</span><strong>Tile Accent & Shelving</strong><small>Wall tile paired with floating wood shelves</small></span></button><button class="gallery-tile" type="button" data-category="Kitchens" data-index="13" aria-label="Open photo: Dark Tile Backsplash"><img src="images/IMG_3206.webp" alt="Textured black tile backsplash with wood cabinetry" loading="lazy" decoding="async"><span class="gallery-tile-info"><span class="gallery-tile-label">KITCHENS · IN PROGRESS</span><strong>Dark Tile Backsplash</strong><small>Textured black tile backsplash with wood cabinetry</small></span></button></div><p class="gallery-intro">Photos show real project details at different stages of work. Images marked “In Progress” are not presented as finished projects.</p></section></div></section>
+    <section class="section" id="faq"><div class="wrap"><div class="section-tag">Common questions</div><div class="section-heading"><h2>Good questions.<br>Clear answers.</h2></div><div class="faq-list"><details><summary>Do you handle complete turnkey renovations?</summary><p>Yes, turnkey construction and renovation is a core focus. Share the details of your project so Andriy can discuss the scope and available options.</p></details><details><summary>Can I ask about a smaller project?</summary><p>Absolutely. Whether you need a specific improvement or a larger renovation, reach out to discuss what you have in mind.</p></details><details><summary>How do I get started?</summary><p>Call or text Andriy at +1 (514) 995-1274 with a short description of your project. Photos or approximate measurements can help with the initial conversation.</p></details></div></div></section>
+    <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="section-tag" style="color:#f3bf2d">Let's build something great</div><h2>Have a project<br>in mind?</h2><p>From the first idea to the last detail — let’s talk about what you want to build or renovate.</p><span style="color:#a6a6a6;font-size:13px">Speak directly with Andriy</span><a href="tel:+15149951274" class="phone">+1 (514) 995-1274</a><a style="display:inline-block;margin-bottom:22px;color:#ffc928;overflow-wrap:anywhere" href="mailto:elit.bud.canada@gmail.com">elit.bud.canada@gmail.com</a><div class="buttons"><a class="btn primary" href="tel:+15149951274">Call Andriy ↗</a><a class="btn outline" href="sms:+15149951274" style="background:transparent;border-color:#777;color:white">Send a text →</a></div></div><form class="contact-card" id="project-form" action="https://formsubmit.co/ajax/elit.bud.canada@gmail.com" method="POST"><input type="hidden" name="_subject" value="New ELIT BUD website inquiry"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><h3>Tell us about your project</h3><p>Send your project details directly to our email inbox.</p><div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" required maxlength="100" placeholder="Your name" autocomplete="name"></div><div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" required maxlength="180" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="phone">Your phone (optional)</label><input id="phone" name="phone" type="tel" maxlength="32" autocomplete="tel" placeholder="Phone number"></div><div class="field"><label for="project">Project type</label><select id="project" name="project"><option>Turnkey construction / renovation</option><option>Home renovation</option><option>Kitchen / bathroom</option><option>Interior finishing</option><option>Drywall / painting</option><option>Other project</option></select></div><div class="field"><label for="message">Tell us a little about it</label><textarea id="message" name="message" required maxlength="1200" placeholder="What would you like to get done?"></textarea></div><button class="btn primary" id="send-button" type="submit">Send project inquiry →</button><p id="form-status" role="status" aria-live="polite" class="form-note"></p><p class="form-note">Your inquiry will be sent by FormSubmit to elit.bud.canada@gmail.com. Please do not include sensitive personal information.</p></form></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="footbrand" href="#home">ELIT <span>BUD</span></a><div class="foot-copy">© <span id="year">2026</span> ELIT BUD · Construction & Renovation</div><a href="tel:+15149951274">+1 (514) 995-1274</a></div></footer>
+  <script>
+    const menu = document.querySelector('#menu');
+    const links = document.querySelector('#navlinks');
+    const setMenu = (open) => {
+      links.classList.toggle('open', open);
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      menu.textContent = open ? '✕' : '☰';
+    };
+    menu.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', (event) => {
+      if (links.classList.contains('open') && !links.contains(event.target) && !menu.contains(event.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menu.focus(); }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 770 && links.classList.contains('open')) setMenu(false);
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    const projectForm = document.querySelector('#project-form');
+    const sendButton = document.querySelector('#send-button');
+    const statusEl = document.querySelector('#form-status');
+    projectForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!projectForm.reportValidity()) return;
+      sendButton.disabled = true;
+      sendButton.textContent = 'Sending...';
+      statusEl.textContent = '';
+      try {
+        const fields = Object.fromEntries(new FormData(projectForm).entries());
+        if (fields._honey) return;
+        const response = await fetch(projectForm.action, {
+          method: 'POST',
+          headers: { 'Content-Type':'application/json', 'Accept':'application/json' },
+          body: JSON.stringify(fields)
+        });
+        const data = await response.json();
+        if (!response.ok || data.success === false || data.success === 'false') throw new Error('Submission rejected');
+        statusEl.textContent = 'Your request was submitted. Thank you!';
+        projectForm.reset();
+      } catch (error) {
+        statusEl.textContent = 'Could not send your request. Please email elit.bud.canada@gmail.com or call +1 (514) 995-1274.';
+      } finally {
+        sendButton.disabled = false;
+        sendButton.textContent = 'Send project inquiry →';
+      }
+    });
+
+    // Real project gallery — no external dependencies.
+    const galleryToggle=document.getElementById('gallery-toggle');
+    const galleryPanel=document.getElementById('real-gallery');
+    const galleryClose=document.getElementById('gallery-close');
+    const tiles=[...document.querySelectorAll('.gallery-tile')];
+    const filters=[...document.querySelectorAll('.gallery-filter')];
+    const lb=document.getElementById('photo-lightbox');
+    const lbImage=document.getElementById('lightbox-image');
+    const lbCaption=document.getElementById('lightbox-caption');
+    let current=0, lastFocus=null, touchStart=null;
+    function toggleGallery(show){
+      galleryPanel.hidden=!show;
+      galleryToggle.setAttribute('aria-expanded',String(show));
+      galleryToggle.textContent=show?'Hide Real Project Photos ↑':'View Real Project Photos ↗';
+      if(show){galleryPanel.scrollIntoView({behavior:'smooth',block:'start'});}
+      else {galleryToggle.focus();}
+    }
+    galleryToggle.addEventListener('click',()=>toggleGallery(galleryPanel.hidden));
+    galleryClose.addEventListener('click',()=>toggleGallery(false));
+    filters.forEach(btn=>btn.addEventListener('click',()=>{
+      filters.forEach(f=>{const yes=f===btn;f.classList.toggle('active',yes);f.setAttribute('aria-pressed',String(yes));});
+      tiles.forEach(tile=>tile.classList.toggle('gallery-item-hidden',btn.dataset.category!=='All'&&tile.dataset.category!==btn.dataset.category));
+    }));
+    function visibleIndexes(){return tiles.map((t,i)=>t.classList.contains('gallery-item-hidden')?null:i).filter(x=>x!==null);}
+    function showPhoto(index){
+      current=index;
+      const tile=tiles[current],pic=tile.querySelector('img');
+      lbImage.src=pic.src;lbImage.alt=pic.alt;
+      lbCaption.innerHTML='';
+      const name=document.createElement('strong');name.textContent=tile.querySelector('strong').textContent;
+      const detail=document.createElement('small');detail.textContent=pic.alt;
+      lbCaption.append(name,detail);
+    }
+    function openPhoto(index){lastFocus=document.activeElement;showPhoto(index);lb.hidden=false;document.body.classList.add('lightbox-open');document.getElementById('lightbox-close').focus();}
+    function closePhoto(){lb.hidden=true;document.body.classList.remove('lightbox-open');lbImage.removeAttribute('src');if(lastFocus)lastFocus.focus();}
+    function movePhoto(delta){let items=visibleIndexes(),pos=items.indexOf(current);showPhoto(items[(pos+delta+items.length)%items.length]);}
+    tiles.forEach((tile,i)=>tile.addEventListener('click',()=>openPhoto(i)));
+    document.getElementById('lightbox-close').addEventListener('click',closePhoto);
+    document.getElementById('lightbox-prev').addEventListener('click',()=>movePhoto(-1));
+    document.getElementById('lightbox-next').addEventListener('click',()=>movePhoto(1));
+    lb.addEventListener('click',e=>{if(e.target===lb)closePhoto();});
+    document.addEventListener('keydown',e=>{
+      if(lb.hidden)return;
+      if(e.key==='Escape')closePhoto();
+      if(e.key==='ArrowLeft')movePhoto(-1);
+      if(e.key==='ArrowRight')movePhoto(1);
+      if(e.key==='Tab'){
+        const controls=[...lb.querySelectorAll('button')];
+        const first=controls[0],last=controls[controls.length-1];
+        if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+        if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+      }
+    });
+    lbImage.addEventListener('touchstart',e=>{touchStart=e.changedTouches[0].screenX;},{passive:true});
+    lbImage.addEventListener('touchend',e=>{if(touchStart===null)return;const dx=e.changedTouches[0].screenX-touchStart;touchStart=null;if(Math.abs(dx)>45)movePhoto(dx<0?1:-1);},{passive:true});
+
+  </script>
+<div id="photo-lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Project photo viewer"><button class="lightbox-control lightbox-x" id="lightbox-close" aria-label="Close photo viewer" type="button">✕</button><button class="lightbox-control lightbox-prev" id="lightbox-prev" aria-label="Previous photo" type="button">‹</button><img id="lightbox-image" src="" alt=""><div class="lightbox-caption" id="lightbox-caption"></div><button class="lightbox-control lightbox-next" id="lightbox-next" aria-label="Next photo" type="button">›</button></div>
+</body>
+</html>
