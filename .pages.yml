@@ -1,0 +1,47 @@
+
+media:
+  input: images
+  output: /images
+  rename: safe
+
+content:
+  - name: projects
+    label: Project Gallery
+    type: collection
+    path: content/projects
+    format: json
+    filename: "{primary}.json"
+    fields:
+      - name: title
+        label: Project Title
+        type: string
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Bathrooms
+            - Kitchens
+            - Flooring
+            - Outdoor
+            - Interior
+
+      - name: image
+        label: Project Photo
+        type: image
+        required: true
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: status
+        label: Project Status
+        type: select
+        options:
+          values:
+            - Finished
+            - In Progress
