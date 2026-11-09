@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Kitchen Renovation",
+    "category": "Kitchens",
+    "image": "/images/IMG_3511.webp",
+    "description": "Kitchen cabinetry, tile backsplash and countertop installation",
+    "status": "In Progress"
+  },
+  {
+    "title": "Kitchen Cabinetry & Finishes",
+    "category": "Kitchens",
+    "image": "/images/IMG_3510.webp",
+    "description": "Kitchen renovation details with custom cabinets and stone-look surfaces",
+    "status": "In Progress"
+  },
+  {
+    "title": "Modern Walk-In Shower",
+    "category": "Bathrooms",
+    "image": "/images/IMG_3389.webp",
+    "description": "Large-format tile with an integrated shower niche",
+    "status": "In Progress"
+  },
+  {
+    "title": "Marble-Look Shower",
+    "category": "Bathrooms",
+    "image": "/images/IMG_3194.webp",
+    "description": "Bright wall tile paired with a contrasting dark shower floor",
+    "status": "In Progress"
+  },
+  {
+    "title": "Double Vanity & Tile",
+    "category": "Bathrooms",
+    "image": "/images/IMG_3536.webp",
+    "description": "Coordinated tile backsplash, cabinetry and vanity surfaces",
+    "status": "In Progress"
+  },
+  {
+    "title": "Rustic Shower Renovation",
+    "category": "Bathrooms",
+    "image": "/images/IMG_3761.webp",
+    "description": "River-stone shower floor, tiled walls and natural wood accents",
+    "status": "In Progress"
+  },
+  {
+    "title": "Patterned Tile Flooring",
+    "category": "Flooring",
+    "image": "/images/IMG_3538.webp",
+    "description": "Decorative floor tile installation with gray accent pattern",
+    "status": "In Progress"
+  },
+  {
+    "title": "Black & White Tile",
+    "category": "Flooring",
+    "image": "/images/IMG_3569.webp",
+    "description": "High-contrast checkerboard tile floor",
+    "status": "Finished"
+  },
+  {
+    "title": "Wood Deck Installation",
+    "category": "Outdoor",
+    "image": "/images/IMG_2549.webp",
+    "description": "Outdoor wood deck with a clean rectangular design",
+    "status": "Finished"
+  },
+  {
+    "title": "Deck & Gazebo",
+    "category": "Outdoor",
+    "image": "/images/IMG_2973.webp",
+    "description": "Outdoor deck and gazebo with dark metal roof",
+    "status": "Finished"
+  },
+  {
+    "title": "Stone Feature Wall",
+    "category": "Interior",
+    "image": "/images/IMG_3749.webp",
+    "description": "Natural-stone-look pillar and timber railing details",
+    "status": "Finished"
+  },
+  {
+    "title": "Custom Interior Niche",
+    "category": "Interior",
+    "image": "/images/IMG_3541.webp",
+    "description": "Arched decorative alcove, cabinetry and tile accent",
+    "status": "In Progress"
+  },
+  {
+    "title": "Tile Accent & Shelving",
+    "category": "Interior",
+    "image": "/images/IMG_3500.webp",
+    "description": "Wall tile paired with floating wood shelves",
+    "status": "In Progress"
+  },
+  {
+    "title": "Dark Tile Backsplash",
+    "category": "Kitchens",
+    "image": "/images/IMG_3206.webp",
+    "description": "Textured black tile backsplash with wood cabinetry",
+    "status": "In Progress"
+  }
+]
