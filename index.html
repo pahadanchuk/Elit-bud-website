@@ -192,7 +192,7 @@ body.lightbox-open{overflow:hidden}
     const galleryToggle=document.getElementById('gallery-toggle');
     const galleryPanel=document.getElementById('real-gallery');
     const galleryClose=document.getElementById('gallery-close');
-    const tiles=[...document.querySelectorAll('.gallery-tile')];
+    let tiles=[...document.querySelectorAll('.gallery-tile')];
     const filters=[...document.querySelectorAll('.gallery-filter')];
     const lb=document.getElementById('photo-lightbox');
     const lbImage=document.getElementById('lightbox-image');
@@ -241,6 +241,49 @@ body.lightbox-open{overflow:hidden}
         if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
       }
     });
+    // CMS-backed projects. Uses a static JSON manifest rebuilt by GitHub Actions.
+    // If the manifest is temporarily unavailable, original gallery stays visible.
+    async function loadCmsGallery(){
+      try {
+        const res=await fetch('gallery-data.json',{cache:'no-store'});
+        if(!res.ok) throw new Error('Gallery manifest unavailable');
+        const projects=await res.json();
+        if(!Array.isArray(projects)) throw new Error('Invalid gallery manifest');
+        const grid=document.getElementById('gallery-grid');
+        const thumbs=document.querySelector('.real-thumbs');
+        grid.replaceChildren();
+        projects.forEach((project,i)=>{
+          if(!project||typeof project.image!=='string'||!project.image.startsWith('/images/'))return;
+          const tile=document.createElement('button');
+          tile.type='button';tile.className='gallery-tile';
+          tile.dataset.category=project.category||'Interior';
+          tile.dataset.index=String(i);
+          tile.setAttribute('aria-label','Open photo: '+(project.title||'Project photo'));
+          const img=document.createElement('img');
+          img.src=project.image;img.alt=project.description||project.title||'ELIT BUD project';
+          img.loading='lazy';img.decoding='async';
+          const info=document.createElement('span');info.className='gallery-tile-info';
+          const label=document.createElement('span');label.className='gallery-tile-label';
+          label.textContent=(project.category||'Project').toUpperCase()+' · '+(project.status||'Project Photo').toUpperCase();
+          const title=document.createElement('strong');title.textContent=project.title||'Project';
+          const desc=document.createElement('small');desc.textContent=project.description||'';
+          info.append(label,title,desc);tile.append(img,info);
+          grid.appendChild(tile);
+          tile.addEventListener('click',()=>openPhoto(tiles.indexOf(tile)));
+        });
+        tiles=[...grid.querySelectorAll('.gallery-tile')];
+        const active=document.querySelector('.gallery-filter.active');
+        const cat=active?active.dataset.category:'All';
+        tiles.forEach(tile=>tile.classList.toggle('gallery-item-hidden',cat!=='All'&&tile.dataset.category!==cat));
+        thumbs.replaceChildren();
+        projects.filter(p=>p&&typeof p.image==='string'&&p.image.startsWith('/images/')).slice(0,3).forEach(p=>{
+          const img=document.createElement('img');img.src=p.image;img.alt='';img.loading='lazy';thumbs.appendChild(img);
+        });
+        // Hide the thumbnail row when no projects exist.
+        thumbs.hidden=thumbs.children.length===0;
+      } catch(err){console.warn('Using original gallery until CMS manifest is available.',err);}
+    }
+    loadCmsGallery();
     lbImage.addEventListener('touchstart',e=>{touchStart=e.changedTouches[0].screenX;},{passive:true});
     lbImage.addEventListener('touchend',e=>{if(touchStart===null)return;const dx=e.changedTouches[0].screenX-touchStart;touchStart=null;if(Math.abs(dx)>45)movePhoto(dx<0?1:-1);},{passive:true});
 
