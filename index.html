@@ -261,7 +261,10 @@ body.lightbox-open{overflow:hidden}
           tile.dataset.index=String(i);
           tile.setAttribute('aria-label','Open photo: '+(project.title||'Project photo'));
           const img=document.createElement('img');
-          img.src=project.image;img.alt=project.description||project.title||'ELIT BUD project';
+          img.src = new URL(
+  project.image.replace(/^\/+/, ''),
+  document.baseURI
+).href;img.alt=project.description||project.title||'ELIT BUD project';
           img.loading='lazy';img.decoding='async';
           const info=document.createElement('span');info.className='gallery-tile-info';
           const label=document.createElement('span');label.className='gallery-tile-label';
