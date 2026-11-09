@@ -3,32 +3,70 @@ name: Update photo gallery
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - 'content/projects/**'
-      - 'scripts/build_gallery.py'
+      - "content/projects/**"
+      - "images/**"
+      - "scripts/build_gallery.py"
+
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: gallery-update
+  cancel-in-progress: false
+
 jobs:
-  generate:
+  update-gallery:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout project
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
 
-      - name: Generate gallery list
-        run: python3 scripts/build_gallery.py
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      - name: Publish gallery list
+      - name: Build gallery
+        run: python scripts/build_gallery.py
+
+      - name: Check gallery
         run: |
-          if ! git diff --quiet -- gallery-data.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add gallery-data.json
-            git commit -m "Update gallery data from Pages CMS"
-            git push
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("gallery-data.json")
+          projects = json.loads(path.read_text())
+
+          print(f"Total gallery photos: {len(projects)}")
+
+          for project in projects:
+              print(
+                  project.get("title"),
+                  "-",
+                  project.get("image")
+              )
+          PY
+
+      - name: Commit updated gallery
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add gallery-data.json
+
+          if git diff --cached --quiet; then
+            echo "Gallery already up to date"
+          else
+            git commit -m "Automatically update project gallery"
+            git push origin HEAD:main
           fi
